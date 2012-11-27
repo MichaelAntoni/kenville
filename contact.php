@@ -69,8 +69,8 @@ include_once "inc/header.html";
             <?php 
                 if(isset($_POST['email'])) {
                      
-                    $email_to = "michael@axisweb.org";
-                    $email_subject = "AWD Enquiry";
+                    $email_to = "info@northyorkshirehouse.co.uk";
+                    $email_subject = "House Enquiry from the Website";
                     
                     
                     $fullname = $_POST['fullname']; // required
