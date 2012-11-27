@@ -63,6 +63,61 @@ include_once "inc/header.html";
     </section>
   </div>   
 
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                <script>
+
+                  function initialize() {
+                    var axisLocation = new google.maps.LatLng(53.7946285, -1.5374008);
+                    var mapOptions = {
+                      center: axisLocation,
+                      zoom: 14,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(
+                        document.getElementById('map_canvas'), mapOptions);
+
+                    var panoramaOptions = {
+                      position: axisLocation,
+                      addressControl: false,
+                    /*
+                      addressControlOptions: {
+                        position: google.maps.ControlPosition.BOTTOM,
+                        //description: "Google Sydney - Reception"
+                      },
+                    */
+                      linksControl: false,
+                      panControl: false,
+                      zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.SMALL
+                      },
+                      enableCloseButton: false,
+                      pov: {
+                        heading: 200,
+                        pitch: 0,
+                        zoom: 1
+                      }
+                    };
+                    var panorama = new  google.maps.StreetViewPanorama(document.getElementById('pano'),panoramaOptions);
+                    map.setStreetView(panorama);
+                  }
+                </script>
+
+
+                <div class="span6">
+                    <!-- <div id="map_canvas">Loading...</div> -->
+                    
+                    <div id="map_canvas" style="width: 400px; height: 300px"></div>
+                    <div id="pano" style=" width: 400px; height: 300px;"></div>
+                    
+                    
+                    
+                </div>
+                
+
+
+
+
 <div class="container">
     <div class="row"> 
         <div class="span12 ">
