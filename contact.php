@@ -62,10 +62,12 @@ include_once "inc/header.html";
       
     </section>
   </div>   
+  
+  
+  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmTD9f2YlV_ZzJAfauRyJjYnQH3YD-AeA&amp;sensor=false"></script>
 
-
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                <script>
+                 <script>
 
                   function initialize() {
                     var axisLocation = new google.maps.LatLng(53.7946285, -1.5374008);
@@ -102,18 +104,12 @@ include_once "inc/header.html";
                     map.setStreetView(panorama);
                   }
                 </script>
-
-
-                <div class="span6">
-                    <!-- <div id="map_canvas">Loading...</div> -->
-                    
-                    <div id="map_canvas" style="width: 400px; height: 300px"></div>
-                    <div id="pano" style=" width: 400px; height: 300px;"></div>
-                    
-                    
-                    
-                </div>
                 
+                <div class="span6">
+                    <div id="map_canvas" ></div>
+                    <div id="pano" style=" width: 400px; height: 300px;"></div>
+                </div>
+
 
 
 
